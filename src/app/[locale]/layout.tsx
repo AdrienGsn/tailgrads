@@ -78,6 +78,12 @@ export default async function RootLayout(
             dir={isRtlLang(locale) ? "rtl" : "ltr"}
             className="h-full"
         >
+            <head>
+                <meta
+                    name="google-site-verification"
+                    content="t5WHqewuRsnQqDsdGHuE6zg8l2EUeFZ40rdGE_i6t5I"
+                />
+            </head>
             <body className={cn("h-full bg-bakground", inter.className)}>
                 <Providers locale={locale} messages={messages}>
                     <Header />
