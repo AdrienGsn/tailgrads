@@ -32,7 +32,7 @@ export async function generateMetadata(props: {
             default: config.title,
             template: `%s - ${config.title}`,
         },
-        description: config.description,
+        description: t("description"),
         icons: [
             {
                 rel: "favicon",
@@ -52,14 +52,14 @@ export async function generateMetadata(props: {
         openGraph: {
             type: "website",
             title: config.title,
-            description: config.description,
+            description: t("description"),
             url: getServerUrl(),
             images: ["/images/opengraph-image.png"],
         },
         twitter: {
             card: "summary_large_image",
             title: config.title,
-            description: config.description,
+            description: t("description"),
             site: getServerUrl(),
             images: ["/images/twitter-image.png"],
         },
