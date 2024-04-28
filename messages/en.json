@@ -1,0 +1,56 @@
+{
+    "metadata": {
+        "description": "TailGrads is a user-friendly web tool designed to blend Tailwind CSS colors and generate striking gradients, allowing you to achieve perfect color combinations. You can easily copy and paste class names for seamless integration into your project.",
+        "title": {
+            "privacy": "Privacy Policy"
+        }
+    },
+    "header": {
+        "home": "Home",
+        "generator": "Generator",
+        "gradients": "Gradients",
+        "feedback": "Send Feedback"
+    },
+    "hero": {
+        "description": "TailGrads is a user-friendly web tool designed to blend Tailwind CSS colors and generate striking gradients, allowing you to achieve perfect color combinations. You can easily copy and paste class names for seamless integration into your project.",
+        "getStarted": "Generate Gradient"
+    },
+    "generator": {
+        "title": "Generator",
+        "subTitle": "Generate Your Custom Gradient",
+        "background": "Background",
+        "text": "Text",
+        "settings": "Settings",
+        "settingsDescription": "Add the third color if needed and set the gradient direction if you're looking for a linear or radial gradient.",
+        "direction": "Direction",
+        "thirdColor": "Third Color",
+        "yes": "Yes",
+        "no": "No",
+        "fromColor": "From Color",
+        "viaColor": "Via Color",
+        "toColor": "To Color",
+        "stopPercent": "Stop Percent",
+        "stopDescription": "Set the percent of the color",
+        "yourText": "Your Text",
+        "copy": "Copy",
+        "directions": {
+            "bg-gradient-to-t": "To Top",
+            "bg-gradient-to-tr": "To Top Right",
+            "bg-gradient-to-r": "To Right",
+            "bg-gradient-to-br": "To Bottom Right",
+            "bg-gradient-to-b": "To Bottom",
+            "bg-gradient-to-bl": "To Bottom Left",
+            "bg-gradient-to-l": "To Left",
+            "bg-gradient-to-tl": "To Top Left"
+        }
+    },
+    "gradients": {
+        "title": "Awesome Gradients",
+        "subTitle": "Choose from our ready-to-use Tailwind CSS gradients to create stunning cards, mobile apps, and websites."
+    },
+    "footer": {
+        "copyrights": "© {year} {title}. All rights reserved.",
+        "home": "Home",
+        "privacy": "Privacy Policy"
+    }
+}

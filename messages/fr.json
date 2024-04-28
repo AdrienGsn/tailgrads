@@ -1,0 +1,56 @@
+{
+    "metadata": {
+        "description": "TailGrads est un outil web convivial conçu pour mélanger les couleurs Tailwind CSS et générer des dégradés saisissants, vous permettant d'atteindre des combinaisons de couleurs parfaites. Vous pouvez facilement copier et coller les noms de classe pour une intégration fluide dans votre projet.",
+        "title": {
+            "privacy": "Politique de confidentialité"
+        }
+    },
+    "header": {
+        "home": "Accueil",
+        "generator": "Générateur",
+        "gradients": "Dégradés",
+        "feedback": "Send Feedback"
+    },
+    "hero": {
+        "description": "TailGrads est un outil web convivial conçu pour mélanger les couleurs Tailwind CSS et générer des dégradés saisissants, vous permettant d'atteindre des combinaisons de couleurs parfaites. Vous pouvez facilement copier et coller les noms de classe pour une intégration fluide dans votre projet.",
+        "getStarted": "Généré un dégradé"
+    },
+    "generator": {
+        "title": "Générateur",
+        "subTitle": "Générez votre dégradé personnalisé",
+        "background": "Fond",
+        "text": "Texte",
+        "settings": "Parametres",
+        "settingsDescription": "Ajoutez la troisième couleur si nécessaire et définissez la direction du dégradé si vous recherchez un dégradé linéaire ou un dégradé radial.",
+        "direction": "Direction",
+        "thirdColor": "Troisième Couleur",
+        "yes": "Oui",
+        "no": "Non",
+        "fromColor": "From Couleur",
+        "viaColor": "Via Couleur",
+        "toColor": "To Couleur",
+        "stopPercent": "Stop Poucentage",
+        "stopDescription": "Définiser le pourcentage de la couleur",
+        "yourText": "Votre texte",
+        "copy": "Copier",
+        "directions": {
+            "bg-gradient-to-t": "Vers Haut",
+            "bg-gradient-to-tr": "Vers Haut Droite",
+            "bg-gradient-to-r": "Vers Droite",
+            "bg-gradient-to-br": "Vers Bas Droite",
+            "bg-gradient-to-b": "Vers Bas",
+            "bg-gradient-to-bl": "Vers Bas Gauche",
+            "bg-gradient-to-l": "Vers Gauche",
+            "bg-gradient-to-tl": "Vers Haut Gauche"
+        }
+    },
+    "gradients": {
+        "title": "Des dégradés impressionnants",
+        "subTitle": "Choisissez parmi nos dégradés CSS Tailwind prêts à l'emploi pour créer de superbes cartes, applications mobiles et sites Web."
+    },
+    "footer": {
+        "copyrights": "© {year} {title}. Tous droit réservés.",
+        "home": "Accueil",
+        "privacy": "Politique de confidentialité"
+    }
+}
