@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { GradientCard } from "./gradient-card";
 import { Section } from "./section";
 
@@ -27,14 +28,13 @@ const GRADIENTS = [
 ];
 
 export const Gradients = () => {
+    const t = useTranslations("gradients");
+
     return (
         <Section id="gradients" className="flex flex-col gap-5">
             <div className="max-md:text-center">
-                <h2 className="text-4xl font-semibold">Awesome Gradients</h2>
-                <h3 className="text-xl">
-                    Choose from our ready-to-use Tailwind CSS gradients to
-                    create stunning cards, mobile apps, and websites.
-                </h3>
+                <h2 className="text-4xl font-semibold">{t("title")}</h2>
+                <h3 className="text-xl">{t("subTitle")}</h3>
             </div>
             <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
                 {GRADIENTS.map((gradient, index) => (

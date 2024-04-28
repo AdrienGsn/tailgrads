@@ -3,15 +3,20 @@
 import { Layout } from "@/components/page/layout";
 import { buttonVariants } from "@/components/ui/button";
 import { config } from "@/config";
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 
 export const Footer = () => {
+    const t = useTranslations("footer");
+
     return (
         <footer className="mt-auto w-full bg-muted py-2">
             <Layout className="flex-col-reverse items-center justify-between md:flex-row">
                 <span className="text-sm">
-                    © {new Date().getFullYear()} {config.title}. All rights
-                    reserved.
+                    {t("copyrights", {
+                        year: new Date().getFullYear(),
+                        title: config.title,
+                    })}
                 </span>
                 <nav className="flex items-center">
                     <Link
@@ -21,7 +26,7 @@ export const Footer = () => {
                             size: "sm",
                         })}
                     >
-                        Home
+                        {t("home")}
                     </Link>
                     <Link
                         href={`mailto:${config.email}`}
@@ -30,7 +35,7 @@ export const Footer = () => {
                             size: "sm",
                         })}
                     >
-                        Send Feedback
+                        {t("feedback")}
                     </Link>
                     <Link
                         href="/privacy"
@@ -39,7 +44,7 @@ export const Footer = () => {
                             size: "sm",
                         })}
                     >
-                        Privacy Policy
+                        {t("privacy")}
                     </Link>
                 </nav>
             </Layout>

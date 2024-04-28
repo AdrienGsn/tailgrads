@@ -15,28 +15,31 @@ import useCopyModal from "@/hooks/use-copy-modal";
 import useGradient from "@/hooks/use-gradient";
 import { cn } from "@/lib/utils";
 import { Redo, Undo } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { useState } from "react";
 import { useMediaQuery } from "usehooks-ts";
 import { ColorSelector } from "./color-selector";
 import { CopyButton } from "./copy-button";
 import { StopPercentInput } from "./stop-percent-input";
 
-const TAILWIND_DIRECTIONS = {
-    "bg-gradient-to-t": "To Top",
-    "bg-gradient-to-tr": "To Top Right",
-    "bg-gradient-to-r": "To Right",
-    "bg-gradient-to-br": "To Bottom Right",
-    "bg-gradient-to-b": "To Bottom",
-    "bg-gradient-to-bl": "To Bottom Left",
-    "bg-gradient-to-l": "To Left",
-    "bg-gradient-to-tl": "To Top Left",
-};
+const TAILWIND_DIRECTIONS = [
+    "bg-gradient-to-t",
+    "bg-gradient-to-tr",
+    "bg-gradient-to-r",
+    "bg-gradient-to-br",
+    "bg-gradient-to-b",
+    "bg-gradient-to-bl",
+    "bg-gradient-to-l",
+    "bg-gradient-to-tl",
+];
 
 export type GradientSelectorProps = {
     text?: boolean;
 };
 
 export const GradientSelector = (props: GradientSelectorProps) => {
+    const t = useTranslations("generator");
+
     const isMobile = useMediaQuery("(max-width: 768px)");
 
     const {
@@ -84,16 +87,14 @@ export const GradientSelector = (props: GradientSelectorProps) => {
         <div className="flex flex-col gap-10">
             <Card className="flex gap-8 rounded p-4 max-lg:flex-row xl:items-start xl:justify-between">
                 <div className="flex w-1/2 flex-col gap-2">
-                    <h3 className="text-base xl:text-xl">Settings</h3>
+                    <h3 className="text-base xl:text-xl">{t("settings")}</h3>
                     <p className="max-w-md text-xs xl:text-base">
-                        Add the third color if needed and set the gradient
-                        direction if you're looking for a linear or radial
-                        gradient.
+                        {t("settingsDescription")}
                     </p>
                 </div>
                 <div className="grid w-1/2 gap-4 xl:grid-cols-2">
                     <div className="flex flex-col gap-1">
-                        <p className="text-sm">Direction</p>
+                        <p className="text-sm">{t("direction")}</p>
                         <Select
                             defaultValue="bg-gradient-to-r"
                             onValueChange={(direction) =>
@@ -104,18 +105,14 @@ export const GradientSelector = (props: GradientSelectorProps) => {
                                 <SelectValue />
                             </SelectTrigger>
                             <SelectContent>
-                                {Object.keys(TAILWIND_DIRECTIONS).map(
+                                {Object.values(TAILWIND_DIRECTIONS).map(
                                     (direction: string, index) => (
                                         <SelectItem
                                             key={index}
                                             value={direction}
                                             className="text-xs"
                                         >
-                                            {
-                                                TAILWIND_DIRECTIONS[
-                                                    direction as keyof typeof TAILWIND_DIRECTIONS
-                                                ]
-                                            }
+                                            {t(`directions.${direction}`)}
                                         </SelectItem>
                                     )
                                 )}
@@ -123,7 +120,7 @@ export const GradientSelector = (props: GradientSelectorProps) => {
                         </Select>
                     </div>
                     <div className="flex flex-col gap-1">
-                        <p className="text-sm">Third Color</p>
+                        <p className="text-sm">{t("thirdColor")}</p>
                         <Select
                             defaultValue="false"
                             onValueChange={(active) => {
@@ -145,17 +142,17 @@ export const GradientSelector = (props: GradientSelectorProps) => {
                             </SelectTrigger>
                             <SelectContent>
                                 <SelectItem value="false" className="text-xs">
-                                    No
+                                    {t("no")}
                                 </SelectItem>
                                 <SelectItem value="true" className="text-xs">
-                                    Yes
+                                    {t("yes")}
                                 </SelectItem>
                             </SelectContent>
                         </Select>
                     </div>
                     {props.text && (
                         <div className="flex flex-col gap-1 xl:col-span-2">
-                            <h3>Your Text</h3>
+                            <h3>{t("yourText")}</h3>
                             <Input
                                 className="w-full"
                                 value={text}
@@ -176,21 +173,21 @@ export const GradientSelector = (props: GradientSelectorProps) => {
                                     value="from"
                                     onClick={() => setStep("from")}
                                 >
-                                    From Color
+                                    {t("fromColor")}
                                 </TabsTrigger>
                                 {activeVia && (
                                     <TabsTrigger
                                         value="via"
                                         onClick={() => setStep("via")}
                                     >
-                                        Via Color
+                                        {t("viaColor")}
                                     </TabsTrigger>
                                 )}
                                 <TabsTrigger
                                     value="to"
                                     onClick={() => setStep("to")}
                                 >
-                                    To Color
+                                    {t("toColor")}
                                 </TabsTrigger>
                             </TabsList>
                             <div className="flex items-center gap-2">
@@ -202,7 +199,7 @@ export const GradientSelector = (props: GradientSelectorProps) => {
                                     onClick={undo}
                                 >
                                     <Undo className="size-4" />
-                                    Undo
+                                    {t("undo")}
                                 </Button>
                                 <Button
                                     variant="outline"
@@ -212,7 +209,7 @@ export const GradientSelector = (props: GradientSelectorProps) => {
                                     onClick={redo}
                                 >
                                     <Redo className="size-4" />
-                                    Redo
+                                    {t("redo")}
                                 </Button>
                             </div>
                         </div>
@@ -222,9 +219,11 @@ export const GradientSelector = (props: GradientSelectorProps) => {
                         >
                             <div className="flex gap-4 max-lg:flex-row md:items-center md:justify-between">
                                 <div className="flex flex-col gap-1">
-                                    <h3 className="text-lg">Stop Percent</h3>
+                                    <h3 className="text-lg">
+                                        {t("stopPercent")}
+                                    </h3>
                                     <p className="text-sm">
-                                        Set the percent of the color
+                                        {t("stopDescription")}
                                     </p>
                                 </div>
                                 <StopPercentInput
@@ -242,9 +241,11 @@ export const GradientSelector = (props: GradientSelectorProps) => {
                         >
                             <div className="flex gap-4 max-lg:flex-row md:items-center md:justify-between">
                                 <div className="flex flex-col gap-1">
-                                    <h3 className="text-lg">Stop Percent</h3>
+                                    <h3 className="text-lg">
+                                        {t("stopPercent")}
+                                    </h3>
                                     <p className="text-sm">
-                                        Set the percent of the color
+                                        {t("stopDescription")}
                                     </p>
                                 </div>
                                 <StopPercentInput
@@ -259,9 +260,11 @@ export const GradientSelector = (props: GradientSelectorProps) => {
                         <TabsContent value="to" className="flex flex-col gap-4">
                             <div className="flex gap-4 max-lg:flex-row md:items-center md:justify-between">
                                 <div className="flex flex-col gap-1">
-                                    <h3 className="text-lg">Stop Percent</h3>
+                                    <h3 className="text-lg">
+                                        {t("stopPercent")}
+                                    </h3>
                                     <p className="text-sm">
-                                        Set the percent of the color
+                                        {t("stopDescription")}
                                     </p>
                                 </div>
                                 <StopPercentInput

@@ -1,11 +1,14 @@
 "use client";
 
 import { buttonVariants } from "@/components/ui/button";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 import { Section } from "./section";
 
 export const Hero = () => {
+    const t = useTranslations("hero");
+
     return (
         <Section
             id=""
@@ -14,18 +17,14 @@ export const Hero = () => {
             <div className="flex flex-col gap-2">
                 <h2 className="text-4xl font-semibold">TailGrads</h2>
                 <h3 className="max-w-xl text-xl md:text-2xl">
-                    TailGrads is a user-friendly web tool designed to blend
-                    Tailwind CSS colors and generate striking gradients,
-                    allowing you to achieve perfect color combinations. You can
-                    easily copy and paste class names for seamless integration
-                    into your project.
+                    {t("description")}
                 </h3>
                 <div className="mt-16">
                     <Link
                         href="/#generator"
                         className={buttonVariants({ size: "lg" })}
                     >
-                        Generate Gradient
+                        {t("getStarted")}
                     </Link>
                 </div>
             </div>

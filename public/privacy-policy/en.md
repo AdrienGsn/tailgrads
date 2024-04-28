@@ -1,6 +1,6 @@
 # Privacy Policy of TailGrads
 
-**Last updated:** 22/04/2024
+**Last updated:** 29/04/2024
 
 This Privacy Policy governs the manner in which TailGrads, a service provided by ADDevelopment, collects, uses, maintains, and discloses information collected from users (individually or collectively, "Users") of the TailGrads website (hereinafter referred to as the "Site").
 
@@ -32,7 +32,6 @@ By using this site, you signify your acceptance of this policy. If you do not ag
 
 If you have any questions about this Privacy Policy, the practices of this site, or your interactions with this site, please contact us at:
 
-
 **ADDevelopment**
 
-addevelopment.pro@gmail.com
+[addevelopment.pro@gmail.com](mailto:addevelopment.pro@gmail.com)

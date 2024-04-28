@@ -9,7 +9,7 @@
         "home": "Accueil",
         "generator": "Générateur",
         "gradients": "Dégradés",
-        "feedback": "Send Feedback"
+        "feedback": "Envoyer un Feedback"
     },
     "hero": {
         "description": "TailGrads est un outil web convivial conçu pour mélanger les couleurs Tailwind CSS et générer des dégradés saisissants, vous permettant d'atteindre des combinaisons de couleurs parfaites. Vous pouvez facilement copier et coller les noms de classe pour une intégration fluide dans votre projet.",
@@ -26,9 +26,9 @@
         "thirdColor": "Troisième Couleur",
         "yes": "Oui",
         "no": "Non",
-        "fromColor": "From Couleur",
-        "viaColor": "Via Couleur",
-        "toColor": "To Couleur",
+        "fromColor": "Couleur de début",
+        "viaColor": "Couleur intermédiaire",
+        "toColor": "Couleur de fin",
         "stopPercent": "Stop Poucentage",
         "stopDescription": "Définiser le pourcentage de la couleur",
         "yourText": "Votre texte",
@@ -42,7 +42,9 @@
             "bg-gradient-to-bl": "Vers Bas Gauche",
             "bg-gradient-to-l": "Vers Gauche",
             "bg-gradient-to-tl": "Vers Haut Gauche"
-        }
+        },
+        "undo": "Annuler",
+        "redo": "Revenir"
     },
     "gradients": {
         "title": "Des dégradés impressionnants",
@@ -51,6 +53,7 @@
     "footer": {
         "copyrights": "© {year} {title}. Tous droit réservés.",
         "home": "Accueil",
+        "feedback": "Envoyer un Feedback",
         "privacy": "Politique de confidentialité"
     }
 }

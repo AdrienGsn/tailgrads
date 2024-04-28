@@ -2,15 +2,18 @@
 
 import { Card } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { useTranslations } from "next-intl";
 import { GradientSelector } from "./gradient-selector";
 import { Section } from "./section";
 
 export const Generator = () => {
+    const t = useTranslations("generator");
+
     return (
         <Section id="generator" className="flex flex-col gap-10">
             <div className="max-md:text-center">
-                <h2 className="text-4xl font-semibold">Generator</h2>
-                <h3 className="text-xl">Generate Your Custom Gradient</h3>
+                <h2 className="text-4xl font-semibold">{t("title")}</h2>
+                <h3 className="text-xl">{t("subTitle")}</h3>
             </div>
             <Tabs defaultValue="background">
                 <div className="flex w-full justify-center">
@@ -19,10 +22,10 @@ export const Generator = () => {
                             value="background"
                             className="py-1 lg:px-10"
                         >
-                            Background
+                            {t("background")}
                         </TabsTrigger>
                         <TabsTrigger value="text" className="py-1 lg:px-10">
-                            Text
+                            {t("text")}
                         </TabsTrigger>
                     </TabsList>
                 </div>

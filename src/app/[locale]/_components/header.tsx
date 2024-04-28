@@ -11,17 +11,12 @@ import {
     useTransform,
 } from "framer-motion";
 import { MessageCircle } from "lucide-react";
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { useState } from "react";
 
 export const Header = () => {
-    // const { scrollYBouncedProgress } = useDeboundedScroll(400);
-
-    // const scrollYBouncedProgressDelayed = useTransform(
-    //     scrollYBouncedProgress,
-    //     [0, 0.75, 1],
-    //     [0, 0, 1]
-    // );
+    const t = useTranslations("header");
 
     const { scrollY, scrollYProgress } = useScroll();
 
@@ -64,19 +59,19 @@ export const Header = () => {
                             variant: "link",
                         })}
                     >
-                        Home
+                        {t("home")}
                     </Link>
                     <Link
                         href="/#generator"
                         className={buttonVariants({ variant: "link" })}
                     >
-                        Generator
+                        {t("generator")}
                     </Link>
                     <Link
                         href="/#gradients"
                         className={buttonVariants({ variant: "link" })}
                     >
-                        Gradients
+                        {t("gradients")}
                     </Link>
                 </motion.nav>
                 <motion.div
@@ -98,7 +93,7 @@ export const Header = () => {
                         })}
                     >
                         <MessageCircle className="size-5" />
-                        Send Feedback
+                        {t("feedback")}
                     </Link>
                     <div>
                         <ThemeToggle />

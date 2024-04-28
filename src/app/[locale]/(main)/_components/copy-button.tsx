@@ -4,6 +4,7 @@ import { Copy } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import useCopyModal from "@/hooks/use-copy-modal";
+import { useTranslations } from "next-intl";
 
 export type GradientCardProps = {
     gradient: string;
@@ -11,6 +12,8 @@ export type GradientCardProps = {
 };
 
 export const CopyButton = (props: GradientCardProps) => {
+    const t = useTranslations("generator");
+
     const openCopyModal = useCopyModal((state) => state.onOpen);
 
     return (
@@ -22,7 +25,7 @@ export const CopyButton = (props: GradientCardProps) => {
                 className="items-center gap-2 group-hover:flex max-md:absolute max-md:bottom-1 max-md:right-1 max-md:flex md:hidden"
             >
                 <Copy className="size-5" />
-                <span>Copy</span>
+                <span>{t("copy")}</span>
             </Button>
         </div>
     );

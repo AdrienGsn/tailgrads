@@ -42,7 +42,9 @@
             "bg-gradient-to-bl": "To Bottom Left",
             "bg-gradient-to-l": "To Left",
             "bg-gradient-to-tl": "To Top Left"
-        }
+        },
+        "undo": "Undo",
+        "redo": "Redo"
     },
     "gradients": {
         "title": "Awesome Gradients",
@@ -51,6 +53,7 @@
     "footer": {
         "copyrights": "© {year} {title}. All rights reserved.",
         "home": "Home",
+        "feedback": "Send Feedback",
         "privacy": "Privacy Policy"
     }
 }
