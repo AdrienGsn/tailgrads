@@ -1,7 +1,7 @@
 import { getServerUrl } from "@/lib/get-server-url";
 import { MetadataRoute } from "next";
 
-export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+export default function sitemap(): MetadataRoute.Sitemap {
     return [
         {
             url: `${getServerUrl()}/`,
