@@ -30,13 +30,9 @@ Check the [live site](https://tailgrads.vercel.app/)
 
 2. Install dependencies: `npm install`
 
-3. Create a `.env.local` file in the project's root directory.
+3. Run the development server: `npm run dev`
 
-4. In the `.env.local` file, set the `NEXT_PUBLIC_FONTS_API_KEY` variable with a valid Google Fonts API key. For example: `NEXT_PUBLIC_FONTS_API_KEY=your-google-fonts-api-key`. You can obtain a Google Fonts API key by following Google's API key creation instructions
-
-5. Run the development server: `npm run dev`
-
-6. Open your browser and visit `http://localhost:3000` to start using TailGrads.
+4. Open your browser and visit `http://localhost:3000` to start using TailGrads.
 
 ---
 
