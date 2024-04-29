@@ -14,6 +14,10 @@ export const Ads = () => {
         }
     }, []);
 
+    if (!ENV.NEXT_PUBLIC_GOOGLE_ADSENSE_CLIENT_ID) {
+        return null;
+    }
+
     return (
         <Layout>
             <LayoutContent className="py-2">

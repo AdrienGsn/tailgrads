@@ -6,8 +6,8 @@ const ENV = createEnv({
         NODE_ENV: z.enum(["development", "production", "test"]),
     },
     client: {
-        NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION: z.string(),
-        NEXT_PUBLIC_GOOGLE_ADSENSE_CLIENT_ID: z.string(),
+        NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION: z.string().optional(),
+        NEXT_PUBLIC_GOOGLE_ADSENSE_CLIENT_ID: z.string().optional(),
     },
     experimental__runtimeEnv: {
         NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION:

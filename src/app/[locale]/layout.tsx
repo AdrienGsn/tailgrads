@@ -81,15 +81,23 @@ export default async function RootLayout(
             className="h-full"
         >
             <head>
-                <meta
-                    name="google-site-verification"
-                    content={ENV.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION}
-                />
-                <meta
-                    name="google-adsense-account"
-                    content={ENV.NEXT_PUBLIC_GOOGLE_ADSENSE_CLIENT_ID}
-                />
-                <AdSense pId={ENV.NEXT_PUBLIC_GOOGLE_ADSENSE_CLIENT_ID} />
+                {ENV.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION && (
+                    <meta
+                        name="google-site-verification"
+                        content={ENV.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION}
+                    />
+                )}
+                {ENV.NEXT_PUBLIC_GOOGLE_ADSENSE_CLIENT_ID && (
+                    <>
+                        <meta
+                            name="google-adsense-account"
+                            content={ENV.NEXT_PUBLIC_GOOGLE_ADSENSE_CLIENT_ID}
+                        />
+                        <AdSense
+                            pId={ENV.NEXT_PUBLIC_GOOGLE_ADSENSE_CLIENT_ID}
+                        />
+                    </>
+                )}
             </head>
             <body className={cn("h-full bg-bakground", inter.className)}>
                 <Providers locale={locale} messages={messages}>
