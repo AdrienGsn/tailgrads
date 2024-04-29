@@ -285,7 +285,10 @@ export const GradientSelector = (props: GradientSelectorProps) => {
                     )}
                 >
                     <div className="absolute size-full">
-                        <CopyButton gradient={getGradient()} text={text} />
+                        <CopyButton
+                            gradient={getGradient()}
+                            text={props.text ? text : undefined}
+                        />
                     </div>
                     {props.text && (
                         <div className="flex size-full items-center justify-center p-4">

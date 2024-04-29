@@ -46,7 +46,7 @@ export const CopyModal = () => {
                         {text && (
                             <h2
                                 className={cn(
-                                    "z-50 text-4xl font-semibold  max-w-sm",
+                                    "text-4xl font-semibold max-w-sm",
                                     gradient
                                 )}
                             >

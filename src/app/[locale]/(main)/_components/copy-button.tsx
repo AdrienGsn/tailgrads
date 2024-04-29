@@ -6,12 +6,12 @@ import { Button } from "@/components/ui/button";
 import useCopyModal from "@/hooks/use-copy-modal";
 import { useTranslations } from "next-intl";
 
-export type GradientCardProps = {
+export type CopyButtonProps = {
     gradient: string;
     text?: string;
 };
 
-export const CopyButton = (props: GradientCardProps) => {
+export const CopyButton = (props: CopyButtonProps) => {
     const t = useTranslations("generator");
 
     const openCopyModal = useCopyModal((state) => state.onOpen);
