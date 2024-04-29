@@ -10,6 +10,6 @@ export default createIntlMiddleware({
 
 export const config = {
     matcher: [
-        "/((?!api|_next/static|_next/image|favicon.ico|apple-icon.png|favicon.svg|images/|privacy-policy/|sitemap.xml|robots.txt).*)",
+        "/((?!api|_next/static|_next/image|favicon.ico|apple-icon.png|favicon.svg|images/|privacy-policy/|sitemap.xml|robots.txt|Ads.txt).*)",
     ],
 };
