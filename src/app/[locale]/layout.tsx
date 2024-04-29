@@ -7,6 +7,7 @@ import { ScrollToTopButton } from "@/components/scroll-to-top-button";
 import TailwindIndicator from "@/components/utils/tailwind-indicator";
 import { config } from "@/config";
 import { Locale } from "@/i18n";
+import ENV from "@/lib/env";
 import { getServerUrl } from "@/lib/get-server-url";
 import { cn } from "@/lib/utils";
 import { LayoutParams } from "@/types/next";
@@ -82,6 +83,10 @@ export default async function RootLayout(
                 <meta
                     name="google-site-verification"
                     content="t5WHqewuRsnQqDsdGHuE6zg8l2EUeFZ40rdGE_i6t5I"
+                />
+                <meta
+                    name="google-adsense-account"
+                    content={ENV.ADSENSE_CLIENT_ID}
                 />
             </head>
             <body className={cn("h-full bg-bakground", inter.className)}>
