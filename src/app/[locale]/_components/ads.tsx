@@ -21,7 +21,7 @@ export const Ads = () => {
                     // eslint-disable-next-line tailwindcss/no-custom-classname
                     className="adsbygoogle"
                     style={{ display: "block" }}
-                    data-ad-client={ENV.GOOGLE_ADSENSE_CLIENT_ID}
+                    data-ad-client={ENV.NEXT_PUBLIC_GOOGLE_ADSENSE_CLIENT_ID}
                     data-ad-slot="8731154998"
                     data-ad-format="auto"
                     data-full-width-responsive="true"
