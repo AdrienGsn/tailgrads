@@ -13,7 +13,6 @@ import { cn } from "@/lib/utils";
 import { LayoutParams } from "@/types/next";
 import { getMessages, getTranslations } from "next-intl/server";
 import { isRtlLang } from "rtl-detect";
-import { Ads } from "./_components/ads";
 import { Footer } from "./_components/footer";
 import { Header } from "./_components/header";
 import { Providers } from "./providers";
@@ -98,7 +97,6 @@ export default async function RootLayout(
                 </Providers>
                 <TailwindIndicator />
             </body>
-            <Ads />
         </html>
     );
 }
