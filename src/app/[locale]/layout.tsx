@@ -94,11 +94,11 @@ export default async function RootLayout(
                     <Header />
                     <main className="flex-1">{props.children}</main>
                     <ScrollToTopButton />
-                    <Ads />
                     <Footer />
                 </Providers>
                 <TailwindIndicator />
             </body>
+            <Ads />
         </html>
     );
 }

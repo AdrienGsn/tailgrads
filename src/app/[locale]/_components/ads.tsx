@@ -1,26 +1,20 @@
 "use client";
 
-import { Adsense } from "@ctrl/react-adsense";
+import Script from "next/script";
 
-import { Layout, LayoutContent } from "@/components/page/layout";
 import ENV from "@/lib/env";
 
 export const Ads = () => {
+    if (ENV.NODE_ENV !== "production") {
+        return null;
+    }
+
     return (
-        <Layout>
-            <LayoutContent className="my-4">
-                {process.env.NODE_ENV === "production" && (
-                    <div>
-                        <Adsense
-                            client={ENV.ADSENSE_CLIENT_ID}
-                            slot="7259870550"
-                            style={{ display: "block" }}
-                            layout="in-article"
-                            format="fluid"
-                        />
-                    </div>
-                )}
-            </LayoutContent>
-        </Layout>
+        <Script
+            async
+            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ENV.ADSENSE_CLIENT_ID}`}
+            crossOrigin="anonymous"
+            strategy="afterInteractive"
+        />
     );
 };
