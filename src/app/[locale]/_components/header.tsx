@@ -74,31 +74,29 @@ export const Header = () => {
                         {t("gradients")}
                     </Link>
                 </motion.nav>
-                <motion.div
-                    style={{
-                        translateY: useTransform(
-                            scrollYProgress,
-                            [0, 0.1],
-                            [0, -100]
-                        ),
-                    }}
-                    transition={{ duration: 0.35, ease: "easeInOut" }}
-                    className="flex items-center gap-1 divide-x"
-                >
-                    <Link
+                <div className="flex items-center gap-1">
+                    <motion.a
                         href={`mailto:${config.email}`}
                         className={buttonVariants({
                             variant: "link",
                             className: "flex items-center gap-1",
                         })}
+                        style={{
+                            translateY: useTransform(
+                                scrollYProgress,
+                                [0, 0.1],
+                                [0, -100]
+                            ),
+                        }}
+                        transition={{ duration: 0.35, ease: "easeInOut" }}
                     >
                         <MessageCircle className="size-5" />
-                        {t("feedback")}
-                    </Link>
+                        <span className="hidden md:flex">{t("feedback")}</span>
+                    </motion.a>
                     <div>
                         <ThemeToggle />
                     </div>
-                </motion.div>
+                </div>
             </div>
         </motion.header>
     );

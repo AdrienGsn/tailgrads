@@ -16,11 +16,13 @@ export const Logo = () => {
                     height: useTransform(scrollYProgress, [0, 0.1], [35, 28]),
                     width: useTransform(scrollYProgress, [0, 0.1], [35, 28]),
                 }}
+                transition={{ duration: 0.35, ease: "easeInOut" }}
             />
             <motion.p
                 style={{
                     fontSize: useTransform(scrollYProgress, [0, 0.1], [18, 5]),
                 }}
+                transition={{ duration: 0.35, ease: "easeInOut" }}
                 className="hidden font-semibold md:flex"
             >
                 {config.title}

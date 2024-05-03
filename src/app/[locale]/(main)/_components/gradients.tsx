@@ -32,7 +32,7 @@ export const Gradients = () => {
 
     return (
         <Section id="gradients" className="flex flex-col gap-5">
-            <div className="max-md:text-center">
+            <div className="max-lg:text-center">
                 <h2 className="text-4xl font-semibold">{t("title")}</h2>
                 <h3 className="text-xl">{t("subTitle")}</h3>
             </div>

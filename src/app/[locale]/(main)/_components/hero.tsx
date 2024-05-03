@@ -12,7 +12,7 @@ export const Hero = () => {
     return (
         <Section
             id=""
-            className="flex gap-20 max-lg:flex-row max-lg:items-center max-lg:text-center lg:items-center lg:justify-between"
+            className="flex gap-20 max-lg:flex-col max-lg:items-center max-lg:text-center lg:items-center lg:justify-between"
         >
             <div className="flex flex-col gap-2">
                 <h2 className="text-4xl font-semibold">TailGrads</h2>

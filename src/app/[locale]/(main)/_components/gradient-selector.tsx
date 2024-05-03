@@ -85,7 +85,7 @@ export const GradientSelector = (props: GradientSelectorProps) => {
 
     return (
         <div className="flex flex-col gap-10">
-            <Card className="flex gap-8 rounded p-4 max-lg:flex-row xl:items-start xl:justify-between">
+            <Card className="flex gap-8 rounded p-4 max-lg:flex-col xl:items-start xl:justify-between">
                 <div className="flex w-1/2 flex-col gap-2">
                     <h3 className="text-base xl:text-xl">{t("settings")}</h3>
                     <p className="max-w-md text-xs xl:text-base">
@@ -164,10 +164,10 @@ export const GradientSelector = (props: GradientSelectorProps) => {
                     )}
                 </div>
             </Card>
-            <div className="flex gap-4 max-lg:flex-row">
+            <div className="flex gap-4 max-lg:flex-col">
                 <div className="flex flex-col gap-2">
                     <Tabs defaultValue="from" className="space-y-5">
-                        <div className="flex items-center justify-between gap-4">
+                        <div className="flex flex-wrap items-center justify-between gap-4">
                             <TabsList>
                                 <TabsTrigger
                                     value="from"
@@ -217,7 +217,7 @@ export const GradientSelector = (props: GradientSelectorProps) => {
                             value="from"
                             className="flex flex-col gap-4"
                         >
-                            <div className="flex gap-4 max-lg:flex-row md:items-center md:justify-between">
+                            <div className="flex gap-4 max-md:flex-col md:items-center md:justify-between">
                                 <div className="flex flex-col gap-1">
                                     <h3 className="text-lg">
                                         {t("stopPercent")}
