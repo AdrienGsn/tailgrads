@@ -26,13 +26,16 @@ Check the [live site](https://tailgrads.vercel.app/)
 
 ## Getting Started
 
-1. Clone the repository: `git clone https://github.com/AdrienGsn/tailgrads.git`
+```bash
+# Clone the repository
+$ git clone https://github.com/AdrienGsn/tailgrads.git
 
-2. Install dependencies: `npm install`
+# Install dependencies
+$ npm install
 
-3. Run the development server: `npm run dev`
-
-4. Open your browser and visit `http://localhost:3000` to start using TailGrads.
+# Run the app
+$ npm run dev
+```
 
 ---
 
