@@ -1,7 +1,7 @@
 {
     "metadata": {
         "description": "TailGrads is a user-friendly web tool designed to blend Tailwind CSS colors and generate striking gradients, allowing you to achieve perfect color combinations. You can easily copy and paste class names for seamless integration into your project.",
-        "title": {
+        "titles": {
             "privacy": "Privacy Policy"
         }
     },

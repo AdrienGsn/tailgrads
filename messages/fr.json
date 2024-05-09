@@ -1,7 +1,7 @@
 {
     "metadata": {
         "description": "TailGrads est un outil web convivial conçu pour mélanger les couleurs Tailwind CSS et générer des dégradés saisissants, vous permettant d'atteindre des combinaisons de couleurs parfaites. Vous pouvez facilement copier et coller les noms de classe pour une intégration fluide dans votre projet.",
-        "title": {
+        "titles": {
             "privacy": "Politique de confidentialité"
         }
     },

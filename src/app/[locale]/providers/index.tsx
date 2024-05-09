@@ -20,6 +20,7 @@ export const Providers = (
             <NextIntlClientProvider
                 locale={props.locale}
                 messages={props.messages}
+                timeZone="Europe/Paris"
             >
                 <GradientProvider>
                     <Toaster />
